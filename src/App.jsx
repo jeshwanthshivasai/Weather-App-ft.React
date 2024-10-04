@@ -6,6 +6,8 @@ const App = () => {
     url: 'https://api.openweathermap.org/data/2.5/weather',
   };
 
+  
+
   return (
     <div>
       <input type="text" />
@@ -13,3 +15,5 @@ const App = () => {
     </div>
   );
 };
+
+export default App;
