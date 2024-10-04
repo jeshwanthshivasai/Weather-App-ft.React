@@ -1,68 +1,91 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
+  background-image: url('https://img.freepik.com/free-vector/thunder-clouds-background-vector-green-with-glittery-cute-doodle-illustration-kids_53876-105742.jpg?w=1380&t=st=1728051963~exp=1728052563~hmac=f0a62a4c5093eacd84e42d29f592342fbc9be29e55c50fb1d47207f4f54f0c68');
+  background-size: cover;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  height: 100vh;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+#app {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  padding: 2rem;
+  width: 400px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  color: #444;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.weather {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.weather input[type="text"] {
+  border: 2px solid #ddd;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px 0 0 10px;
+  outline: none;
+  width: 75%;
+  transition: all 0.3s ease;
+}
+
+.weather input[type="text"]:focus {
+  border-color: #009688;
+}
+
+.weather input[type="submit"] {
+  padding: 10px;
+  background-color: #009688;
+  color: white;
+  border: none;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  border-radius: 0 10px 10px 0;
+  transition: background-color 0.3s ease;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.weather input[type="submit"]:hover {
+  background-color: #00796b;
+}
+
+#weather-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 1.5em;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#weather-data img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+#weather-data h2 {
+  font-size: 1.4rem;
+  color: #333;
+}
+
+#weather-data p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 8px;
 }
